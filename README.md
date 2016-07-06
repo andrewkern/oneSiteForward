@@ -2,7 +2,7 @@
 
 ##Background
 This repository houses a collection of programs that perform simple forward time population genetic simulations of a single site.
-The programs simulate a population through either a two epoch population size model (oneSiteForward, oneSiteForwardSelection) or an exponential population size change (oneSiteForwardSelectionExp). These programs do very little-- all they outut is the sojourn time of an allele that has fixed (reached frequency 1.0) in the population. An example use of these can be found in Kern and Schrider (2016).
+The programs simulate a population through either a two epoch population size model (oneSiteForward, oneSiteForwardSelection) or an exponential population size change (oneSiteForwardSelectionExp). These programs do very little-- all they outut is the sojourn time of an allele that has fixed (reached frequency 1.0) in the population. These programs were used in  Kern and Schrider (to appear) to compare output from our program discoal.
 
 ## Installing
 To install the programs simply clone this git repo, and compile using the following command
