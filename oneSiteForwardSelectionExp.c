@@ -19,7 +19,7 @@ int main (int argc, const char * argv[]) {
 	long seed1, seed2;
 	int win,i;
 	int steps = 26;
-	int gN[26] = {1,920,883,846,810,773,736,699,662,626,589,552,515,478,442,405,368,331,294,258,221,184,147,110,74,37};
+	int gN[26] = {38,37,36,37,37,37,37,36,37,37,37,37,36,37,37,37,37,36,37,37,37,37,36,37,37,1};
 	int N[26] = {1032,1189,1371,1580,1821,2099,2419,2788,3213,3703,4268,4919,5670,6535,7531,8680,10004,11530,13289,15316,17653,20345,23449,27026,31149,35900};
 
 
@@ -70,7 +70,7 @@ int main (int argc, const char * argv[]) {
 
 	//shift generations
 	for(i=0;i<steps;i++){
-		if (gN[i]>0)gN[i]++;
+	//	if (gN[i]>0)gN[i]++;
 	}
 
 	win = totGen;
@@ -90,9 +90,9 @@ int main (int argc, const char * argv[]) {
 			
 				tempX = ignbin(N[i],p);
 				p = (float) tempX / N[i];
-				p = selection(p,0.5,s);
+			//	p = selection(p,0.5,s);
 			//	printf("dip: %lf hap: %lf p:%lf\n",selection(p,0.5,s),haploidSelection(p,s),p);
-			//	p = haploidSelection(p,s);
+				p = haploidSelection(p,s);
 			
 				if(p>0.0 && p < 1.0) t+=1;
 				else break;
@@ -104,7 +104,7 @@ int main (int argc, const char * argv[]) {
 			if(totGen - t < win){
 				sum+=t;
 				if(t>maxT) maxT=t;
-				printf("%d\n",t);
+				printf("%d %d\n",t,totGen);
 			}
 		}
 		fixCount++;
